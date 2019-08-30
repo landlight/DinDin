@@ -27,7 +27,6 @@ class FoodActivity : AppCompatActivity() {
         foodList = sf.getValueStringArray("foodList")
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, foodList)
-        foodListView.adapter = adapter
 
         val textInputLayout = TextInputLayout(this)
         textInputLayout.setPadding(
@@ -54,6 +53,8 @@ class FoodActivity : AppCompatActivity() {
                 dialog.cancel()
             }.create()
 
+        foodListView.adapter = adapter
+
         foodListFab.setOnClickListener { view ->
             alert.show()
         }
@@ -69,5 +70,11 @@ class FoodActivity : AppCompatActivity() {
             sf.save("foodList", foodList)
             dialog.cancel()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val sf= SharedPreference (this)
+        foodList = sf.getValueStringArray("foodList")
     }
 }
