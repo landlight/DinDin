@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DinDin</string>
+    <string name="food_list_app_bar">DinDin (FoodList)</string>
+    <string name="add_food">Add Food</string>
+    <string name="hint_add_food">Add Food You Love</string>
+    <string name="btn_decide">Decide</string>
+    <string name="eat_text">Lets Eat This</string>
+    <string name="title_activity_food">FoodActivity</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_centerVertical="true"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/dd_logo" />
+
+    <TextView
+        android:id="@+id/selectedTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/eat_text"
+        android:textSize="30sp"
+        app:fontFamily="cursive" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/decideBtn"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_dark"
+        android:text="@string/btn_decide"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="68dp"
+        android:layout_above="@+id/addFoodBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/addFoodTxt"
+        android:hint="@string/hint_add_food" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addFoodBtn"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/decideBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@color/colorAccent"
+        android:text="@string/add_food"
+        android:textColor="#FFFFFF" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/decideBtn"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        app:backgroundTint="@android:color/background_light"
+        app:srcCompat="@drawable/dd_logo" />
+
+</RelativeLayout>
