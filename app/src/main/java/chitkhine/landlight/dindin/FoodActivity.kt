@@ -3,14 +3,11 @@ package chitkhine.landlight.dindin
 import SharedPreference
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_food.*
 import android.content.DialogInterface
-import android.text.InputType
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -68,13 +65,8 @@ class FoodActivity : AppCompatActivity() {
             foodList.add(food)
             val sf= SharedPreference (this)
             sf.save("foodList", foodList)
-            dialog.cancel()
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        val sf= SharedPreference (this)
-        foodList = sf.getValueStringArray("foodList")
-    }
+
 }
